@@ -25,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-gray-50 text-gray-950 h-[10000px] flex relative justify-center">
+      <body className="bg-gray-50 text-gray-950 h-screen flex relative justify-center">
         <GradiantBackground />
         {children}
       </body>
