@@ -4,11 +4,15 @@ import { Links } from "@/lib/data";
 
 export default function TopNav() {
   return (
-    <div className="bg-white h-16 sm:h-12 w-96 rounded-lg mt-4 flex items-center justify-center flex-wrap">
+    <div className="bg-white h-24 rounded-lg sm:h-12 w-auto sm:rounded-full mt-8 flex items-center justify-center flex-wrap transition">
       <nav>
-        <ul className="flex gap-4 flex-wrap justify-center px-4">
+        <ul className="flex gap-6 flex-wrap justify-center px-8 py-1">
           {Links.map((link) => (
-            <li key={link.hash}>
+            <li
+              key={link.hash}
+              className="text-gray-500 hover:cursor-pointer hover:text-gray-950
+            "
+            >
               <Link href={link.hash}>{link.name}</Link>
             </li>
           ))}
