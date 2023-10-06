@@ -1,10 +1,12 @@
 import { Links } from "@/lib/data";
 import TopNav from "@/app/component/topNav";
-export default function Home() {
-  console.log({ Links });
+import Intro from "@/app/component/intro";
+
+export default function Portfolio() {
   return (
-    <main className="w-full h-screen flex justify-center">
+    <main className="w-full h-screen flex items-center flex-col">
       <TopNav />
+      <Intro />
     </main>
   );
 }

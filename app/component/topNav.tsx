@@ -25,12 +25,12 @@ export default function TopNav() {
             <motion.li
               key={link.hash}
               className={
-                "text-gray-500 hover:cursor-pointer hover:text-gray-950 px-1 transition relative"
+                "text-gray-500 hover:cursor-pointer hover:text-gray-950 px-1 py-1 transition relative"
               }
               onClick={() => setFragment(link.hash)}
             >
               <Link href={link.hash}>
-                <span className="text-black px-2">{link.name}</span>
+                <span className="text-black px-2 ">{link.name}</span>
                 <SelectedNavLink isActivate={fragment === link.hash} />
               </Link>
             </motion.li>
