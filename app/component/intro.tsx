@@ -1,5 +1,11 @@
 import Image from "next/image";
-import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+import {
+  AiFillLinkedin,
+  AiFillGithub,
+  AiOutlineArrowRight,
+  AiOutlineDownload,
+} from "react-icons/ai";
+import { LiaDownloadSolid } from "react-icons/lia";
 
 const Intro = () => {
   return (
@@ -21,18 +27,23 @@ const Intro = () => {
       {/* 4 button Contact me here, Download CV, linkedin, github */}
       <div className="flex gap-2 mt-12">
         <button
-          className="bg-black  text-white font-bold py-3 px-7 rounded-full hover:scale-105 transition duration-100 ease-in-out border-[1px] border-black border-opacity-10
+          className="bg-black flex items-center gap-1 text-white font-bold py-3 px-7 rounded-full hover:scale-105 transition duration-100 ease-in-out border-[1px] border-black border-opacity-10
         "
         >
-          button Contact me here
+          Contact me here
+          <AiOutlineArrowRight size="1.25rem" />
         </button>
-        <button className="bg-white  text-black font-bold py-3 px-7 rounded-full hover:scale-105 transition duration-100 ease-in-out border-[1px] border-black border-opacity-10">
+        <a
+          href="/mones_cv.pdf"
+          className="bg-white flex items-center gap-1 text-black font-bold py-3 px-7 rounded-full hover:scale-105 transition duration-100 ease-in-out border-[1px] border-black border-opacity-10"
+        >
           Download CV
-        </button>
+          <AiOutlineDownload size="1.25rem" />
+        </a>
         <a
           href="https://www.linkedin.com/in/monesul/"
           target="_blank"
-          className="bg-white  text-black font-bold p-4 rounded-full hover:scale-105 transition duration-100 ease-in-out border-[1px] border-black border-opacity-10
+          className="bg-white  text-black font-bold p-4 rounded-full hover:scale-110 transition duration-100 ease-in-out border-[1px] border-black border-opacity-10
           "
         >
           <AiFillLinkedin size="1.5rem" />
@@ -40,7 +51,7 @@ const Intro = () => {
         <a
           href="https://github.com/mones-cse"
           target="_blank"
-          className="bg-white  text-black font-bold p-4 rounded-full hover:scale-105 transition duration-100 ease-in-out border-[1px] border-black border-opacity-10
+          className="bg-white  text-black font-bold p-4 rounded-full hover:scale-110 transition duration-100 ease-in-out border-[1px] border-black border-opacity-10
           "
         >
           <AiFillGithub size="1.5rem" />
