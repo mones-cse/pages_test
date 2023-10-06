@@ -18,9 +18,9 @@ const SelectedNavLink = ({ isActivate }: SelectedNavProps) => {
 export default function TopNav() {
   const [fragment, setFragment] = useState(window.location.hash);
   return (
-    <div className="bg-white h-24 rounded-lg sm:h-12 w-auto sm:rounded-full mt-8 flex items-center justify-center flex-wrap transition z-10">
-      <nav>
-        <motion.ul className="flex gap-6 flex-wrap justify-center px-8 py-1">
+    <div className="mt-12 sm:mt-12 flex items-center justify-center flex-wrap transition z-10 relative">
+      <nav className="w-auto fixed  backdrop-blur bg-white/80 h-24 rounded-lg sm:h-12 sm:rounded-full flex items-center">
+        <motion.ul className="flex gap-1 sm:gap-6 flex-wrap justify-center px-4 py-1">
           {Links.map((link) => (
             <motion.li
               key={link.hash}

@@ -11,7 +11,9 @@ export default function Portfolio() {
       <Intro />
       <SectionDevider />
       <AboutMe />
-      <div className="h-400">1</div>
+      <div className="mt-32 block">1</div>
+      <div className="mt-32 ">2</div>
+      <div className="mt-32 ">3</div>
     </main>
   );
 }
