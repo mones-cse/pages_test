@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 type ProjectProps = {
   name: string;
@@ -8,7 +10,7 @@ type ProjectProps = {
 };
 const Project = ({ name, description, tags, image }: ProjectProps) => {
   return (
-    <div className="bg-gray-100 w-auto my-4 flex max-w-[42rem] rounded-lg border-[1px] border-black border-opacity-10 sm:h-[20rem]">
+    <div className="bg-gray-100 hover:bg-gray-200 w-auto my-4 flex max-w-[42rem] rounded-lg border-[1px] border-black border-opacity-10 sm:h-[20rem] overflow-hidden relative">
       <section className="flex flex-col w-full sm:w-1/2 pt-4 sm:pt-10  sm:pl-10  sm:pr-10 pb-8 px-5">
         <p className="text-2xl font-semibold">{name}</p>
         <p className="leading-relaxed mt-2 text-gray-700">{description}</p>
@@ -23,14 +25,20 @@ const Project = ({ name, description, tags, image }: ProjectProps) => {
           ))}
         </section>
       </section>
-      <section className="w-auto hidden sm:block sm:w-1/2 overflow-hidden mt-8">
-        <Image
-          src={image}
-          alt={name}
-          width={1500}
-          height={1500}
-          className="shadow-2xl"
-        />
+      <section className="w-auto hidden sm:block sm:w-[38rem]  mt-8 absolute left-1/2">
+        <motion.div
+          whileHover={{
+            rotate: -3,
+          }}
+        >
+          <Image
+            src={image}
+            alt={name}
+            width={900}
+            height={900}
+            className="shadow-2xl rounded-lg"
+          />
+        </motion.div>
       </section>
     </div>
   );

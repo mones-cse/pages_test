@@ -27,11 +27,11 @@ const Links = [
 
 const ProjectsData = [
   {
-    name: "Project 1",
+    name: "Dolpin",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Node", "Express", "MongoDB"],
-    image: "https://via.placeholder.com/150",
+      "Dolpin.io is built with IPFS, a distributed system for storing and accessing data.",
+    tags: ["React", "Django", "IPFS", "AWS"],
+    image: "/dolpin.png",
   },
   {
     name: "Project 2",
