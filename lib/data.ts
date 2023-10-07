@@ -49,4 +49,20 @@ const ProjectsData = [
   },
 ];
 
-export { Links, ProjectsData };
+const SkillsData = [
+  "HTML",
+  "CSS",
+  "Javascript",
+  "React",
+  "Node",
+  "Python",
+  "Django",
+  "AWS",
+  "Git",
+  "SQL",
+  "MongoDB",
+  "Next",
+  "IPFS",
+];
+
+export { Links, ProjectsData, SkillsData };
