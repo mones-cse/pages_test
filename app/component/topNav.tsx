@@ -9,7 +9,7 @@ interface SelectedNavProps {
 const SelectedNavLink = ({ isActivate }: SelectedNavProps) => {
   return isActivate ? (
     <motion.span
-      className="absolute inset-0 bg-gray-100 rounded-full"
+      className="absolute inset-0 bg-gray-200 rounded-full"
       style={{ zIndex: -1 }}
       layoutId={"underline"}
     ></motion.span>
@@ -30,7 +30,15 @@ export default function TopNav() {
               onClick={() => setFragment(link.hash)}
             >
               <Link href={link.hash}>
-                <span className="text-black px-2 ">{link.name}</span>
+                <span
+                  className={
+                    fragment === link.hash
+                      ? "text-black px-2 "
+                      : "text-gray-500 px-2"
+                  }
+                >
+                  {link.name}
+                </span>
                 <SelectedNavLink isActivate={fragment === link.hash} />
               </Link>
             </motion.li>
