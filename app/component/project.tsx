@@ -10,7 +10,7 @@ type ProjectProps = {
 };
 const Project = ({ name, description, tags, image }: ProjectProps) => {
   return (
-    <div className="bg-gray-100 hover:bg-gray-200 w-auto my-4 flex max-w-[42rem] rounded-lg border-[1px] border-black border-opacity-10 sm:h-[20rem] overflow-hidden relative">
+    <div className="bg-gray-100 hover:bg-gray-200 w-auto my-8 flex max-w-[42rem] rounded-lg border-[1px] border-black border-opacity-10 sm:h-[20rem] overflow-hidden relative">
       <section className="flex flex-col w-full sm:w-1/2 pt-4 sm:pt-10  sm:pl-10  sm:pr-10 pb-8 px-5">
         <p className="text-2xl font-semibold">{name}</p>
         <p className="leading-relaxed mt-2 text-gray-700">{description}</p>

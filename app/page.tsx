@@ -5,6 +5,8 @@ import SectionDevider from "@/app/component/sectionDevider";
 import AboutMe from "@/app/component/aboutMe";
 import Projects from "@/app/component/projects";
 import Skills from "@/app/component/skills";
+import MyExperience from "@/app/component/myExperience";
+import ContactMe from "@/app/component/contactMe";
 
 export default function Portfolio() {
   return (
@@ -15,9 +17,8 @@ export default function Portfolio() {
       <AboutMe />
       <Projects />
       <Skills />
-      <div className="mt-32 block">1</div>
-      <div className="mt-32 ">2</div>
-      <div className="mt-32 ">3</div>
+      <MyExperience />
+      <ContactMe />
     </main>
   );
 }

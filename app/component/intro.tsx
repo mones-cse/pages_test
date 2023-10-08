@@ -25,7 +25,7 @@ const Intro = () => {
         . My focus is <u> React (Next.js)</u>.
       </p>
       {/* 4 button Contact me here, Download CV, linkedin, github */}
-      <div className="flex gap-2 mt-12">
+      <div className="flex flex-col sm:flex-row gap-2 mt-12">
         <button
           className="bg-black flex items-center gap-1 text-white font-bold py-3 px-7 rounded-full hover:scale-105 transition duration-100 ease-in-out border-[1px] border-black border-opacity-10
         "
@@ -43,7 +43,7 @@ const Intro = () => {
         <a
           href="https://www.linkedin.com/in/monesul/"
           target="_blank"
-          className="bg-white  text-black font-bold p-4 rounded-full hover:scale-110 transition duration-100 ease-in-out border-[1px] border-black border-opacity-10
+          className="bg-white  text-black font-bold p-4 rounded-full hover:scale-110 transition duration-100 ease-in-out border-[1px] border-black border-opacity-10 flex justify-center
           "
         >
           <AiFillLinkedin size="1.5rem" />
@@ -51,7 +51,7 @@ const Intro = () => {
         <a
           href="https://github.com/mones-cse"
           target="_blank"
-          className="bg-white  text-black font-bold p-4 rounded-full hover:scale-110 transition duration-100 ease-in-out border-[1px] border-black border-opacity-10
+          className="bg-white  text-black font-bold p-4 rounded-full hover:scale-110 transition duration-100 ease-in-out border-[1px] border-black border-opacity-10 flex justify-center
           "
         >
           <AiFillGithub size="1.5rem" />
