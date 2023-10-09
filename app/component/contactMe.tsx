@@ -1,6 +1,8 @@
 "use client";
 import { useForm, FieldErrors } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
+import sendEmail from "@/actions/sendEmail";
+import toast from "react-hot-toast";
 interface CustomErrorMessageProps {
   errors: FieldErrors;
   name: string;
@@ -49,12 +51,20 @@ const ContactMe = () => {
       </p>
       <form
         className="flex flex-col gap-4 mb-20"
-        onSubmit={handleSubmit((data) => {
-          alert(JSON.stringify(data));
+        onSubmit={handleSubmit(async ({ email, message }) => {
+          console.log({ email, message });
+          const { data, error } = await sendEmail(email, message);
+          if (error) {
+            toast.error("error sending email");
+            return;
+          }
+
+          toast.success("Email sent successfully!");
         })}
       >
         <input
           className="h-14 p-2 border border-black/10 rounded-lg"
+          type="email"
           {...register("email", {
             required: "Email is required",
             pattern: {
@@ -75,8 +85,12 @@ const ContactMe = () => {
               message: "Message is required",
             },
             minLength: {
-              value: 10,
-              message: "Message must be at least 10 characters",
+              value: 2,
+              message: "Message must be at least 2 characters",
+            },
+            maxLength: {
+              value: 300,
+              message: "Message must be at max 300 characters",
             },
             pattern: {
               value: /^(?=.*[^\d]).+$/i,

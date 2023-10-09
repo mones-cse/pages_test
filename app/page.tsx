@@ -22,13 +22,3 @@ export default function Portfolio() {
     </main>
   );
 }
-
-{
-  /* <div className="bg-gray-100 h-screen w-full">
-  <div className="flex flex-col gap-4 bg-purple-300">
-    <div className=" h-28 bg-orange-500 p-8 w-1/2 even:self-end">1</div>
-    <div className=" h-28 bg-orange-500 p-8 w-1/2 even:self-end">2</div>
-    <div className=" h-28 bg-orange-500 p-8 w-1/2 even:self-end">3</div>
-  </div>
-</div> */
-}
