@@ -42,7 +42,7 @@ const ContactMe = () => {
   });
 
   return (
-    <div className="max-w-[50rem] px-4">
+    <div className="max-w-[50rem] px-4" id="contact">
       <p className="text-3xl font-medium text-center mb-4">Contact Me</p>
       <p className="mb-8">
         Please contact me directly at{" "}

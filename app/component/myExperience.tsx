@@ -1,6 +1,9 @@
 const Experience = () => {
   return (
-    <div className="flex justify-between flex-col lg:flex-row  p-8 even:flex-row-reverse group gap-24">
+    <div
+      className="flex justify-between flex-col lg:flex-row  p-8 even:flex-row-reverse group gap-24"
+      id="experience"
+    >
       {/*  p-4 rounded-lg border border-black/10 shadow-lg relative group */}
       <div
         className="bg-gray-100 border border-black/10 shadow-lg lg:w-1/2 relative p-4

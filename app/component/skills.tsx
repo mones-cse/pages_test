@@ -1,7 +1,7 @@
 import { SkillsData } from "@/lib/data";
 const Skills = () => {
   return (
-    <section className="max-w-[45rem] mb-28 sm:mb-40">
+    <section className="max-w-[45rem] mb-28 sm:mb-40" id="skills">
       <p className="text-3xl font-medium text-center mb-8">My Skills</p>
       <ul className=" flex text-lg gap-2  flex-wrap items-center justify-center">
         {SkillsData.map((skill) => (

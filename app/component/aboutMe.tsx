@@ -1,6 +1,6 @@
 const AboutMe = () => {
   return (
-    <section className="max-w-[45rem] mb-28 sm:mb-40">
+    <section className="max-w-[45rem] mb-28 sm:mb-40" id="about">
       <h1 className="text-3xl font-medium text-center capitalize mb-8">
         About Me
       </h1>
