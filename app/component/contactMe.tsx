@@ -52,14 +52,14 @@ const ContactMe = () => {
       <form
         className="flex flex-col gap-4 mb-20"
         onSubmit={handleSubmit(async ({ email, message }) => {
-          console.log({ email, message });
-          const { data, error } = await sendEmail(email, message);
-          if (error) {
-            toast.error("error sending email");
-            return;
+          const { data, ErrorMessage } = await sendEmail(email, message);
+          if (ErrorMessage) {
+            toast.error("Error while sending email because " + ErrorMessage);
+          } else if (data) {
+            toast.success("Email sent successfully!");
+          } else {
+            toast.error("Somethings went wrong");
           }
-
-          toast.success("Email sent successfully!");
         })}
       >
         <input
